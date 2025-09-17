@@ -1,0 +1,134 @@
+html, body {
+    height: 100%; 
+
+}
+
+
+body {
+    margin: 0;
+     background: linear-gradient(to bottom, #131313, #1a1a1a, #2a2a2a);
+    color: ghostwhite;
+    font-family: 'Bebas Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.barra {
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    border: 15px solid #D00000;
+    background-color: #D00000;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 60px;
+}
+
+.barra button{
+    height: 30px;
+    width: 50px;
+    font-size: 16px;
+}
+
+.barra input{
+    height: 30px;
+    width: 200px;
+    font-size: 16px;
+   
+}
+
+.barra a{
+  
+    margin: 10px;
+}
+
+.filmes {
+
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 5px;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
+
+}
+
+.filme {
+    margin: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 255px;
+    margin-top: 70px;
+    font-size: 30px;
+
+
+}
+
+
+input{
+    border: none;
+    border-radius: 13px;
+    margin-bottom: 5px;
+    color: #921a0f;
+    height: 30px;
+    width: 200px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+    font-size: 15px;
+
+
+}
+
+button{
+    border: none;
+    border-radius: 13px;
+    height: 30px;
+    width: 100%;
+    color:whitesmoke;
+    background-color: #921a0f ;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 15px;
+
+
+
+
+
+}
+
+a{
+    color: whitesmoke;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+
+
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+
+}
+
+.rodape{
+    display: flex;
+    margin-top: auto;
+    border:1px solid #D00000;
+    background-color: #D00000;
+    width: 105%;
+    height: 130px;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    font-decoration: none;
+   
+
+
+
+}

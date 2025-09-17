@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <title>IFilmes</title>
+     <link rel="stylesheet" href="../static/login.css">
+     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+   </head>
+   <body>
+
+
+       <div class="container">
+           <div class = "dados">
+
+                <h1>Login</h1>
+               <form action="/logar" method="post">
+                  <input type="text" name="emailUsuario" placeholder="  Digite seu e-mail">
+                  <input type="password" name="senhaUsuario" placeholder="  Digite sua senha">
+                  <label>Adm</label>
+                  <input type="checkbox" name="admtrue" value="true" placeholder="ADM">
+                  <button type="submit">Enviar</button>
+              </form>
+               <a href="/cadastro">Fazer Cadastro</a>
+               <br>
+               <a href="/">Voltar</a>
+               <p>{{msg}}</p>
+               <br>
+           </div>
+       </div>
+   </body>
+</html>

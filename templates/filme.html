@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFilmes</title>
+</head>
+<body>
+    <div>
+        <img src="../static/imagens/superMan.png" width="455" height="579" />
+        <H1>Nome Filme</H1>
+        <a>classificação</a>    
+        <a>tempo </a>
+        <a>genero</a>
+        <a>descrição</a>
+        <a>trailer</a>
+        <a>sessoes</a>
+        {% if temSessao %}
+            <button>{{nomeSessao}}</button>
+        {% endif %} 
+    </div>
+    <br>
+    <a href="/">Voltar</a>
+</body>
+</html>
