@@ -2,9 +2,9 @@ from flask import *;
 
 app = Flask(__name__)
 
-usuarios = [['d', 'denilson', '1', '10-10-2000']]
-adms = [['m', 'mariany', '2', '15-05-2015']]
-filmes = ['super mam', 'os quatro', 'os trapalhoes']
+usuarios = [['d@g', 'denilson', '1', '10-10-2000']]
+adms = [['m@g', 'mariany', '2', '15-05-2015']]
+filmes = []
 
 @app.route('/')
 def home_page():
@@ -16,7 +16,7 @@ def login():
 
 @app.route('/cinema')
 def cinema():
-    return render_template('cinema.html', usuarios = usuarios)
+    return render_template('cinema.html', filmes = filmes)
 
 @app.route('/cadastro')
 def cadastro():

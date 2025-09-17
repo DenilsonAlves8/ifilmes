@@ -1,25 +1,44 @@
 <!DOCTYPE html>
 <html>
-   <head>
-       <title>IFilmes</title>
-         <link rel="stylesheet" href="../static/cadastro.css">
-     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-   </head>
-   <body>
-   <div class = "container">
-       <div class = "cadastro">
-           <h1>cadastro</h1>
-          <form action="/cadastrar" method="post">
-              <input type="text" name="nomeUsuario" placeholder="Digite seu nome">
-              <input type="text" name="emailUsuario" placeholder="Digite seu e-mail">
-              <input type="password" name="senhaUsuario" placeholder="Digite sua senha">
-              <input type="password" name="confirmacaoSenhaUsuario" placeholder="confirme sua senha">
-              <input type="date" name="nascimentoUsuario" placeholder="Digite sua data de nascimento">
-              <button type="submit">Enviar</button>
-          </form>
-           <p>{{msg}}</p>
-          <a href="/login">Voltar</a>
-       </div>
-   </div>
-   </body>
+  <head>
+    <title>IFilmes</title>
+    <link rel="stylesheet" href="../static/cadastro.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="cadastro">
+        <h1>cadastro</h1>
+        <form action="/cadastrar" method="post">
+          <input type="text" name="nomeUsuario" placeholder="Digite seu nome" />
+          <input
+            type="email"
+            name="emailUsuario"
+            placeholder="Digite seu e-mail"
+          />
+          <input
+            type="password"
+            name="senhaUsuario"
+            placeholder="Digite sua senha"
+          />
+          <input
+            type="password"
+            name="confirmacaoSenhaUsuario"
+            placeholder="confirme sua senha"
+          />
+          <input
+            type="date"
+            name="nascimentoUsuario"
+            placeholder="Digite sua data de nascimento"
+          />
+          <button type="submit">Enviar</button>
+        </form>
+        <p>{{msg}}</p>
+        <a href="/login">Voltar</a>
+      </div>
+    </div>
+  </body>
 </html>
