@@ -1,12 +1,12 @@
 html, body {
     height: 100%; 
-
+    
 }
 
 
 body {
     margin: 0;
-     background: linear-gradient(to bottom, #131313, #1a1a1a, #2a2a2a);
+    background-color: #131313;
     color: ghostwhite;
     font-family: 'Bebas Neue', sans-serif;
     display: flex;
