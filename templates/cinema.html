@@ -1,23 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
     <title>IFilmes</title>
-</head>
-<body>
-    <h1>Lista de Filmes</h1>
-    <hr>
-    {% for filme in filmes %}
-    <p>{{filme[0]}}</p>
-    <p>{{filme[1]}}</p>
-    <p>{{filme[2]}}</p>
-    <p>{{filme[3]}}</p>
-    <p>{{filme[4]}}</p>
-    <p>{{filme[5]}}</p>
-    <p>{{filme[6]}}</p>
-    {% endfor %}
+    <link rel="stylesheet" href="../static/paginaInicial.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="barra">
+      <a href="/">
+        <img src="../static/imagens/mdd.png" width="170" height="70"
+      /></a>
+      <form action="/buscarFilme">
+        <input type="text" placeholder="Pesquisar filme ..." />
+        <button type="submit">Buscar</button>
+      </form>
+      <a href="/"> Home</a>
+      <a href="/cinema"> Cinema</a>
+      <a href="/lanchonete"> Lanchonete</a>
+      <a href="/login"> Conta</a>
+      <br />
+    </div>
 
-</body>
+    <div>
+      <h1>Lista de Filmes</h1>
+      <hr />
+      <br>
+      {% for filme in filmes %}
+      <h2>{{filme[0]}}</h2>
+      <p>{{filme[1]}}</p>
+      <p>{{filme[2]}}</p>
+      <p>{{filme[3]}}</p>
+      <p>{{filme[4]}}</p>
+      <p>{{filme[5]}}</p>
+      <p>{{filme[6]}}</p>
+      {% endfor %}
+    </div>
+  </body>
 </html>

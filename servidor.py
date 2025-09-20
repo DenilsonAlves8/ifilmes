@@ -4,7 +4,8 @@ app = Flask(__name__)
 
 usuarios = [['d@g', 'denilson', '1', '10-10-2000']]
 adms = [['m@g', 'mariany', '2', '15-05-2015']]
-filmes = []
+filmes = [['A Grande Viagem da Sua Vida', 'A Grande Viagem da Sua Vida conta a história de David e Sarah, dois desconhecidos que se conhecem em um casamento e acabam embarcando juntos em uma viagem inesperada. Guiados pelo GPS de um carro antigo, eles chegam a um campo misterioso com uma porta vermelha que os transporta para uma jornada fantástica no tempo. Revivendo momentos marcantes de suas vidas, os dois criam uma conexão especial e refletem sobre o passado, enquanto vislumbram novas possibilidades para o futuro.', 'https://www.youtube.com/watch?v=bQNA_KrpUkI', '01:49', 'Romance', '16']]
+sessoes = ['02:50', '03:20', '01:20']
 
 @app.route('/')
 def home_page():
@@ -14,13 +15,25 @@ def home_page():
 def login():
     return render_template('login.html')
 
+@app.route('/lanchonete')
+def lanchonete():
+    return render_template('lanchonete.html')
+
 @app.route('/cinema')
 def cinema():
     return render_template('cinema.html', filmes = filmes)
 
+@app.route('/versessoes')
+def versessoes():
+    return render_template('sessoes.html', sessoes = sessoes)
+
 @app.route('/cadastro')
 def cadastro():
     return render_template('cadastro.html')
+
+@app.route('/paginaAdm')
+def paginaAdm():
+    return render_template('paginaAdm.html')
 
 @app.route('/verFilme')
 def verFilme():
@@ -43,9 +56,11 @@ def cadastrar():
     else:
         return render_template('cadastro.html', msg = mensagem)
 
-@app.route("/adicionarFilme")
+@app.route("/adicionarFilme", methods=['post'])
 def adicionarFilme():
 
+    global filmes
+    filmenaoexiste = True
     nome = request.form.get('nomeFilme')
     descricao = request.form.get('descriçãoFilme')
     link = request.form.get('linkFilme')
@@ -79,10 +94,14 @@ def adicionarFilme():
     elif opCla == '18':
         classificacao = '18'
 
-    filmes.append([nome, descricao, link, duracao, genero, classificacao])
+    for filme in filmes:
+        if filme == [nome, descricao, link, duracao, genero, classificacao]:
+           filmenaoexiste = False
+    if filmenaoexiste:
+        filmes.append([nome, descricao, link, duracao, genero, classificacao])
     mensagem = 'Adicionado com sucesso.'
-    return render_template('paginaAdm.html', msg = mensagem)
-       
+    return render_template('paginaAdm.html', msg = mensagem, filmes = filmes)
+
 @app.route('/logar', methods=['post'])
 def logar():
 
@@ -94,7 +113,7 @@ def logar():
     if opcao:
         for adm in adms:
             if email == adm[0] and senha == adm[2]:
-                return render_template("paginaAdm.html")
+                return render_template("paginaAdm.html", filmes = filmes)
     else:        
         for usuario in usuarios:
             if email == usuario[0] and senha == usuario[2]:

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFilmes</title>
+</head>
+<body>
+    <p>Horarios disponiveis</p>
+    {% for sessao in sessoes %}
+        <button>{{sessao}}</button>
+    {% endfor %}    
+</body>
+</html>

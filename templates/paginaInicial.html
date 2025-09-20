@@ -1,59 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>IFilmes</title>
-      <link rel="stylesheet" href="../static/paginaInicial.css">
-     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="../static/paginaInicial.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="barra">
+      <a href="/">
+        <img src="../static/imagens/mdd.png" width="170" height="70"
+      /></a>
 
-    <div class = "barra">
-        <img src="../static/imagens/mdd.png" width="170" height="70">
-        <form action="/buscarFilme">
-            <input type="text" placeholder="Pesquisar filme ...">
-            <button type="submit">Buscar</button>
-        </form>
-        <a href=""> Home</a>
-        <a href="/cinema"> Cinema</a>
-        <a href=""> Lanchonete</a>
-        <a href="/login"> Conta</a>
+      <form action="/buscarFilme">
+        <input type="text" placeholder="Pesquisar filme ..." />
+        <button type="submit">Buscar</button>
+      </form>
+      <a href="/"> Home</a>
+      <a href="/cinema"> Cinema</a>
+      <a href="/lanchonete"> Lanchonete</a>
+      <a href="/login"> Conta</a>
 
-        <br>
+      <br />
     </div>
-    <br>
+    <br />
 
-        <div class = "filmes">
+    <p>
+      Este projeto foi desenvolvido como parte da disciplina de Desenvolvimento
+      Web, com o objetivo de criar uma plataforma prática e funcional para a
+      administração do cinema do Instituto Federal. O sistema permite organizar
+      sessões de filmes, gerenciar horários, cadastrar produções, além de
+      oferecer aos usuários informações atualizadas sobre a programação
+      disponível. Nosso foco é unir tecnologia e cultura, proporcionando uma
+      experiência acessível tanto para os gestores quanto para o público que
+      frequenta o cinema.
+    </p>
 
+    <div class="filmes">
+      <div class="filme">
+        <a href="/verFilme">
+          <img src="../static/imagens/superMan.png" width="255" height="379" />
+          <h4>SUPERMAN</h4>
+        </a>
+      </div>
 
-            <div class = "filme">
-                <a href="/verFilme">
-                <img src="../static/imagens/superMan.png" width="255" height="379">
-                <h4>SUPERMAN</h4>
-                </a>
-            </div>
+      <div class="filme">
+        <a href="/verFilme">
+          <img
+            src="../static/imagens/osCarasMalvados.png"
+            width="255"
+            height="379"
+          />
+          <h4>OS CARAS MALVADOS 2</h4>
+        </a>
+      </div>
 
-            <div class = "filme">
-                <a href="/verFilme">
-                <img src="../static/imagens/osCarasMalvados.png" width="255" height="379">
-                <h4>OS CARAS MALVADOS 2</h4>
-                </a>
-            </div>
-
-            <div class = "filme">
-                <a href="/verFilme">
-                <img src="../static/imagens/quarteto.png" width="255" height="379">
-                <h4>QUARTETO FANTÁSTICO: PRIMEIROS PASSOS</h4>
-                </a>
-            </div>
-        </div>
-
-    <br>
-    <div class = "rodape">
-        <h4>   © Desenvolvido por Denilson Santos e Mariany Gomes - 2025   </h4>
+      <div class="filme">
+        <a href="/verFilme">
+          <img src="../static/imagens/quarteto.png" width="255" height="379" />
+          <h4>QUARTETO FANTÁSTICO: PRIMEIROS PASSOS</h4>
+        </a>
+      </div>
     </div>
 
-
-
-</body>
+    <br />
+    <div class="rodape">
+      <h4>© Desenvolvido por Denilson Santos e Mariany Gomes - 2025</h4>
+    </div>
+  </body>
 </html>
