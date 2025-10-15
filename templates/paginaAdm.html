@@ -1,76 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
-      rel="stylesheet"
-    />
-    <title>IFilmes</title>
-  </head>
-  <body>
-    <div>
-      <h1>Pagina de edição</h1>
-    </div>
-    <div>
-      <h2>Adicionar um filme</h2>
-      <hr>
-      <form action="/adicionarFilme" method="post" >
-        <input type="text" name="nomeFilme" placeholder="Digite o nome" required>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" 
+    rel="stylesheet"
+  />
+  <title>IFilmes</title>
+</head>
+<body>
+  <h1>Lista de Filmes</h1>
+  <hr>
+    <a href="/paginaadiconarfilme"><button> + adicionar filme</button></a>
+    <ol>
+      {% if filmes %} {% for filme in filmes %}
+      <div>
+        
+        <li>
+        <a href="/verFilme?nomeFilme={{filme[1]}}&opcao=1">{{ filme[1] }}</a>
+        <a href="/pageditarfilme"><button>Editar</button></a>
+        <a href="/excluirfilme"><button>Excluir</button></a>
+        </li>
+        
         <br>
-        <input
-          type="text"
-          name="descriçãoFilme"
-          placeholder="Digite a descrição"
-          required
-        />
-        <br>
-        <input
-          type="text"
-          name="linkFilme"
-          placeholder="Digite o link do trailer"
-          required
-        />
-        <br>
-        <label for="duração">Digite a duração</label>
-        <input id="duração" name="duracaoFilme" type="time" required>
-        <br />
-        <label>Selecione o gênero</label>
-        <select name="generoFilme">
-          <option value="terror">Terror</option>
-          <option value="comedia">Comédia</option>
-          <option value="romance">Romance</option>
-          <option value="suspense">Suspense</option>
-          <option value="ficcaoCien">Ficção Cientifica</option>
-          <option value="animacao">Animação</option>
-        </select>
-        <br />
-        <label>Selecione a classificação</label>
-        <select name="classificacaoFilme">
-          <option value="livre">Livre</option>
-          <option value="12">12</option>
-          <option value="14">14</option>
-          <option value="16">16</option>
-          <option value="18">18</option>
-        </select>
-        <br />
-        <br />
-        <button type="submit">Enviar</button>
-      </form>
-      <p>{{msg}}</p>
-    </div>
-    <div>
-      <h2>Lista de Filmes</h2>
-      <hr />
-      <br>
-      <ol>
-      {% for filme in filmes %}
-      <li>{{filme[0]}}</li>
-      <li>{{filme}}</li>
-      {% endfor %}
-      </ol>
-    </div>
-    <a href="/login">Voltar</a>
-  </body>
+      </div>
+      {% endfor %} {% endif %}
+    </ol>
+    
+  
+</body>
 </html>

@@ -30,13 +30,14 @@
       <hr />
       <br>
       {% for filme in filmes %}
-      <h2>{{filme[0]}}</h2>
-      <p>{{filme[1]}}</p>
+      <img src="../static/imagens/{{filme[0]}}" alt="" width="455" height="579">
+      <h2>{{filme[1]}}</h2>
       <p>{{filme[2]}}</p>
       <p>{{filme[3]}}</p>
       <p>{{filme[4]}}</p>
       <p>{{filme[5]}}</p>
       <p>{{filme[6]}}</p>
+      <p>{{filme[7]}}</p>
       {% endfor %}
     </div>
   </body>

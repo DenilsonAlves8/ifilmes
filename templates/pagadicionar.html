@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Adicionar um Filme</h2>
+    <hr>
+    <form action="/adicionarFilme" method="post">
+      <input 
+        type="text" 
+        name="imagemFilme" 
+        placeholder="Digite o nome do arquivo do filme" 
+        required
+      >
+      <br>
+      <input 
+        type="text" 
+        name="nomeFilme" 
+        placeholder="Digite o nome" 
+        required
+      >
+      <br>
+      <input 
+        type="text" 
+        name="descriçãoFilme" 
+        placeholder="Digite a descrição" 
+        required
+      >
+      <br>
+      <input 
+        type="text" 
+        name="linkFilme" 
+        placeholder="Digite o link do trailer" 
+        required
+      >
+      <br>
+      <label for="duracao">Digite a duração</label>
+      <input 
+        id="duracao" 
+        name="duracaoFilme" 
+        type="time" 
+        required
+      >
+      <br>
+      <label for="genero">Selecione o gênero</label>
+      <select id="genero" name="generoFilme">
+        <option value="terror">Terror</option>
+        <option value="comedia">Comédia</option>
+        <option value="romance">Romance</option>
+        <option value="suspense">Suspense</option>
+        <option value="ficcaoCien">Ficção Científica</option>
+        <option value="animacao">Animação</option>
+      </select>
+      <br>
+      <label for="classificacao">Selecione a classificação</label>
+      <select id="classificacao" name="classificacaoFilme">
+        <option value="livre">Livre</option>
+        <option value="12">12</option>
+        <option value="14">14</option>
+        <option value="16">16</option>
+        <option value="18">18</option>
+      </select>
+      <br><br>
+      <button type="submit">Enviar</button>
+    </form>
+
+   <h2>Adicionar Sessões</h2>
+    <hr>
+   
+      <input type="number" placeholder="Digite o numero do filme" name="idfilme">
+      <select id="diaSessao" name="diaSessao">
+        <option value="segunda">Segunda-feira</option>
+        <option value="terca">Terça-feira</option>
+        <option value="quarta">Quarta-feira</option>
+        <option value="quinta">Quinta-feira</option>
+        <option value="sexta">Sexta-feira</option>
+        <option value="sabado">Sábado</option>
+      </select>
+      <input type="time" name="horario">
+      <button type="submit">enviar</button>  
+    
+  
+  <footer>
+    <a href="/paginaAdm">Voltar</a>
+  </footer>
+
+    </body>
+</html>

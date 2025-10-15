@@ -4,68 +4,59 @@
     <meta charset="UTF-8" />
     <title>IFilmes</title>
     <link rel="stylesheet" href="../static/paginaInicial.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-    <div class="barra">
-      <a href="/">
-        <img src="../static/imagens/mdd.png" width="170" height="70"
-      /></a>
+      <div class="barra">
+        <a href="/">
+          <img src="../static/imagens/mdd.png" width="170" height="70" />
+        </a>
 
-      <form action="/buscarFilme">
-        <input type="text" placeholder="Pesquisar filme ..." />
-      </form>
-      <a href="/"> Home</a>
-      <a href="/cinema"> Cinema</a>
-      <a href="/lanchonete"> Lanchonete</a>
-      <a href="/login"> Conta</a>
+        <form action="/buscarFilme">
+          <input type="text" placeholder="Pesquisar filme ..." />
+        </form>
+        <a href="/"> Home</a>
+        <a href="/cinema"> Cinema</a>
+        <a href="/lanchonete"> Lanchonete</a>
+        <a href="/login"> Conta</a>
 
-      <br />
-    </div>
-  </header>
+        <br />
+      </div>
+    </header>
+
     <br />
-  <div class="cabecalho">
-    <p>
-      Este projeto foi desenvolvido como parte da disciplina de Desenvolvimento
-      Web, com o objetivo de criar uma plataforma prática e funcional para a
-      administração do cinema do Instituto Federal. O sistema permite organizar
-      sessões de filmes, gerenciar horários, cadastrar produções, além de
-      oferecer aos usuários informações atualizadas sobre a programação
-      disponível. Nosso foco é unir tecnologia e cultura, proporcionando uma
-      experiência acessível tanto para os gestores quanto para o público que
-      frequenta o cinema.
-    </p>
+    <div class="cabecalho">
+      <p>
+        Este projeto foi desenvolvido como parte da disciplina de
+        Desenvolvimento Web, com o objetivo de criar uma plataforma prática e
+        funcional para a administração do cinema do Instituto Federal. O sistema
+        permite organizar sessões de filmes, gerenciar horários, cadastrar
+        produções, além de oferecer aos usuários informações atualizadas sobre a
+        programação disponível. Nosso foco é unir tecnologia e cultura,
+        proporcionando uma experiência acessível tanto para os gestores quanto
+        para o público que frequenta o cinema.
+      </p>
     </div>
 
     <div class="filmes">
+      {% if filmes %} {% for filme in filmes[:3] %}
       <div class="filme">
-        <a href="/verFilme">
-          <img src="../static/imagens/superMan.png" width="255" height="379" />
-          <h4>SUPERMAN</h4>
+        <a href="/verFilme?nomeFilme={{filme[1]}}&">
+          <img src="../static/imagens/{{filme[0]}}" width="255" height="379" />
+          <h4>{{filme[1]}}</h4>
         </a>
       </div>
-
-      <div class="filme">
-        <a href="/verFilme">
-          <img
-            src="../static/imagens/osCarasMalvados.png"
-            width="255"
-            height="379"
-          />
-          <h4>OS CARAS MALVADOS 2</h4>
-        </a>
-      </div>
-
-      <div class="filme">
-        <a href="/verFilme">
-          <img src="../static/imagens/quarteto.png" width="255" height="379" />
-          <h4>QUARTETO FANTÁSTICO: PRIMEIROS PASSOS</h4>
-        </a>
-      </div>
+      {% endfor %} {% endif %}
     </div>
 
     <br />

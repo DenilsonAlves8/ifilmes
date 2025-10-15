@@ -7,22 +7,38 @@
 </head>
 <body>
     <div>
-        <img src="../static/imagens/superMan.png" width="455" height="579" />
-        <H1>Nome Filme</H1>
-        <a>classificação</a>    
-        <a>tempo </a>
-        <a>genero</a>
-        <a>descrição</a>
+        <img src="../static/imagens/{{filme[0]}}" width="455" height="579" />
+        <H1>{{filme[1]}}</H1>
+        <a>{{filme[2]}}</a>
+        <br>    
+        <a href="{{filme[3]}}" target="_blank">{{filme[3]}}</a>
+        <br>
+        <a>{{filme[4]}}</a>
+        <br>
+        <a>{{filme[5]}}</a>
+        <br>
+        <a>{{filme[6]}}</a>
+        <br>
         <a>trailer</a>
         <a>sessoes</a>
         <br>
-        <button>Segunda-feira</button>
-        <button>Terça-feira</button>
-        <button>Quarta-feira</button>
-        <button>Quinta-feira</button>
-        <button>Sábado</button>
+
+        <button onclick="mudarVariavel(7)">Segunda-feira</button>
+        <button onclick="mudarVariavel(8)">Terça-feira</button>
+        <button onclick="mudarVariavel(9)">Quarta-feira</button>
+        <button onclick="mudarVariavel(10)">Quinta-feira</button>
+        <button onclick="mudarVariavel(11)">Sexta-feira</button>
+        <button onclick="mudarVariavel(12)">Sábado</button>
+
+        <script> 
+            function mudarVariavel(variavel){
+               document.getElementById("meuIframe")  
+            }
+        </script>
         <br>
-        <iframe src="/versessoes" frameborder="1" height="100%" width="500px"></iframe>
+        {% for i in filme[x] %}
+        <button>{{i}}</button>
+        {% endfor %}
     </div>
     <br>
     <a href="/">Voltar</a>
