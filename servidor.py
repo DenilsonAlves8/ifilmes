@@ -5,15 +5,15 @@ app = Flask(__name__)
 app.secret_key = 'J!dGo4Zs#67$hde'
 
 usuarios = [['d@g', 'denilson', '1', '10-10-2000']]
-adms = [['m@g', 'mariany', '2', '15-05-2015']]
+adm = [['m@g', 'mariany@gmail.com', '2', '15-05-2015']]
 filmes =  [[
     'agrandeviagemdasuavida.png',
     'A Grande Viagem da Sua Vida',
     'A Grande Viagem da Sua Vida conta a história de David e Sarah, dois desconhecidos que se conhecem em um casamento e acabam embarcando juntos em uma viagem inesperada. Guiados pelo GPS de um carro antigo, eles chegam a um campo misterioso com uma porta vermelha que os transporta para uma jornada fantástica no tempo. Revivendo momentos marcantes de suas vidas, os dois criam uma conexão especial e refletem sobre o passado, enquanto vislumbram novas possibilidades para o futuro.',
     'https://www.youtube.com/watch?v=bQNA_KrpUkI',
-    '01:49',
-    'Romance',
-    '16', [    '00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'], [    '00:00', '01:00', '02:00', '03:00', '04:00', '05:00', 
+    'Duração: 01:49',
+    'Gênero: Romance',
+    'Classificação: 16', [    '00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'], [    '00:00', '01:00', '02:00', '03:00', '04:00', '05:00', 
     '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', 
     '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', 
     '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'], [    '00:00', '01:00', '02:00', '03:00', '04:00', '05:00', 
@@ -26,18 +26,18 @@ filmes =  [[
     'Guardiões da Galáxia',
     'Peter Quill, um aventureiro intergaláctico, rouba uma esfera cobiçada por um vilão poderoso chamado Ronan. Para escapar, ele une forças com um grupo de desajustados: Rocket, Groot, Gamora e Drax. Juntos, eles formam os Guardiões da Galáxia e precisam salvar o universo de uma ameaça devastadora.',
     'https://www.youtube.com/watch?v=d96cjJhvlMA',
-    '02:01',
-    'Ficção Científica',
-    '12', [], [], [], [], [], []
+    'Duração: 02:01',
+    'Gênero: Ficção Científica',
+    'Classificação: 12', [], [], [], [], [], []
   ],
   [
     'corra.png',
     'Corra!',
     'Chris, um jovem negro, vai visitar a família de sua namorada branca pela primeira vez. O que parecia ser um encontro normal se transforma em um pesadelo quando ele descobre segredos perturbadores sobre a comunidade local, revelando um esquema macabro que ameaça sua vida.',
-    'https://www.youtube.com/watch?v=sRfnevzM9kQ',
-    '01:44',
-    'Suspense',
-    '16', [], [], [], [], [], []
+    'https://www.youtube.com/watch?v=mDGV5UucTu8',
+    'Duração: 01:44',
+    'Gênero: Suspense',
+    'Classificação: 16', [], [], [], [], [], []
   ]
 ]
 

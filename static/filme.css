@@ -1,0 +1,75 @@
+header{
+    width: 100%;
+}
+
+
+
+body {
+    background-color: #131313;
+    color: ghostwhite;
+    font-family: 'Bebas Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: auto;
+     text-align: left;
+    padding-left: 35%;
+    padding-right: 35%;
+    
+}
+
+
+
+a{
+    color: whitesmoke;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: bold; 
+    padding-bottom: 20px;
+    font-family: "Lexend", sans-serif;
+    font-size: 15px;
+}
+
+.sess{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    
+}
+
+
+img {
+    display: block;
+    margin: 0 auto; 
+    padding-top: 40px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+
+img:hover {
+    transform: scale(1.03);
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  height: 50px;
+  width: 200px;
+  color: whitesmoke;
+  background-color: #921a0f;
+  font-family: "Lexend", sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  font-weight: bold;
+  margin-bottom: 10px ;
+  margin-right: 10px ;
+}
+
+button:hover{
+    transform: scale(1.03);
+}
+
+
+

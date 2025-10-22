@@ -42,39 +42,55 @@ form{
     justify-content: center;
 }
 
-input{
-    border: none;
-    border-radius: 13px;
-    margin-bottom: 5px;
-    color: #921a0f;
-    height: 30px;
-    width: 200px;
-    font-family: 'Bebas Neue', sans-serif;
-    text-align: center;
-    font-size: 15px;
+input::placeholder {
+  color: whitesmoke;     
+  opacity: 1;       
 }
 
+input{
+    border: 2px solid whitesmoke;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    color: whitesmoke;
+    height: 32px;
+    width: 200px;
+    font-family: "Lexend", sans-serif;
+    text-align: left;
+    font-size: 13px;
+    padding-bottom: 5px;
+   
+}
+
+
+
 button{
+    margin-top: 3px;
     border: none;
-    border-radius: 13px;
-    height: 30px;
+    border-radius: 10px;
+    height: 32px;
     width: 100%;
     color:whitesmoke;
     background-color: #921a0f ;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 15px;
+    font-family: "Lexend", sans-serif;
+    font-size: 13px;
+    text-align: center;
+
 }
 
 a{
+    margin-top: 3px;
     color: whitesmoke;
     text-align: center;
     margin-top: 10px;
     text-decoration: none;
+    font-family: "Lexend", sans-serif;
+    font-size: 13px;
 }
-
 .container{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
+

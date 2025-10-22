@@ -4,14 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IFilmes</title>
+    <link rel="icon" type="image/png" href="../static/imagens/md.png">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="../static/filme.css">
+     
+     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+     <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 </head>
 <body>
     <div>
-        <img src="../static/imagens/{{filme[0]}}" width="455" height="579" />
-        <H1>{{filme[1]}}</H1>
-        <a>{{filme[2]}}</a>
-        <br>    
-        <a href="{{filme[3]}}" target="_blank">{{filme[3]}}</a>
+        <a href="{{ filme[3] }}" target="_blank">
+    <img src="../static/imagens/{{ filme[0] }}" width="455" height="579" />
+</a>
+        
+        <H1>{{filme[1]}} </H1>
+        
+        <a>{{filme[2] }}</a>
+       
+        <br>
         <br>
         <a>{{filme[4]}}</a>
         <br>
@@ -19,9 +32,10 @@
         <br>
         <a>{{filme[6]}}</a>
         <br>
-        <a>trailer</a>
-        <a>sessoes</a>
+    <div class="sess">
+        <a>Sessões</a>
         <br>
+    </div>
 
         <button onclick="mudarVariavel(7)">Segunda-feira</button>
         <button onclick="mudarVariavel(8)">Terça-feira</button>
@@ -41,6 +55,8 @@
         {% endfor %}
     </div>
     <br>
-    <a href="/">Voltar</a>
+   
+    <a href="/" >Voltar</a>
+
 </body>
 </html>

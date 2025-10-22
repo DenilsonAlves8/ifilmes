@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html>
    <head>
+    <link rel="icon" type="image/png" href="../static/imagens/md.png">
        <title>IFilmes</title>
      <link rel="stylesheet" href="../static/login.css">
      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+       <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
    </head>
    <body>
-
-
+       
        <div class="container">
            <div class = "dados">
-
+              
                 <h1>Login</h1>
                <form action="/logar" method="post">
+                
+                    <select id="tipo" name="tipoUsuario">
+                     <option value="" disabled selected>Selecione</option>
+                     <option value="cliente">Usuário</option>
+                     <option value="adm">Administrador</option>
+                    </select>
                   <input type="text" name="emailUsuario" placeholder="  Digite seu e-mail">
                   <input type="password" name="senhaUsuario" placeholder="  Digite sua senha">
-                  <label>Adm</label>
-                  <input type="checkbox" name="admtrue" value="true" placeholder="ADM">
+        
                   <button type="submit">Enviar</button>
               </form>
                <a href="/cadastro">Fazer Cadastro</a>
