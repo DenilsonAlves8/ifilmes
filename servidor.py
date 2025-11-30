@@ -5,7 +5,7 @@ app = Flask(__name__)
 app.secret_key = 'J!dGo4Zs#67$hde'
 
 usuarios = [['d@g', 'denilson', '1', '10-10-2000']]
-adm = [['m@g', 'mariany@gmail.com', '2', '15-05-2015']]
+adms = [['m@g', 'mariany@gmail.com', '2', '15-05-2015']]
 filmes =  [[
     'agrandeviagemdasuavida.png',
     'A Grande Viagem da Sua Vida',
@@ -54,10 +54,6 @@ def home_page():
 @app.route('/login')
 def login():
     return render_template('login.html')
-
-@app.route('/lanchonete')
-def lanchonete():
-    return render_template('lanchonete.html')
 
 @app.route('/cinema')
 def cinema():
@@ -207,8 +203,7 @@ def logar():
     senha = request.form.get('senhaUsuario')
     opcao = request.form.get('admtrue')
     mensagem = 'Usuario não encontrado'
-            
-    if opcao:
+    if "adm" == opcao:
         for adm in adms:
             if email == adm[0] and senha == adm[2]:
                 session['login'] = email
@@ -216,11 +211,12 @@ def logar():
                 return render_template("paginaAdm.html", filmes = filmes)
                 
     else:        
+        print("entrou")
         for usuario in usuarios:
             if email == usuario[0] and senha == usuario[2]:
                 session['login'] = email
                 session['tipo'] = 'cliente'
-                return render_template("paginaInicial.html")
+                return render_template("paginaInicial.html", filmes = filmes)
 
     return render_template('login.html', msg = mensagem)
 
